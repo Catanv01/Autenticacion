@@ -9,6 +9,7 @@
 */
 
 const logout = document.getElementById("logout")
+const miPerfil = document.getElementById("perfil")
 const Logueado = JSON.parse(localStorage.getItem("Logueado"))
 
 if (!Logueado) {
@@ -23,4 +24,8 @@ function salir(){
     localStorage.removeItem("Logueado")
     window.location.href = "login.html"
 }
+function perfil(){
+    window.location.href = "perfil.html"
+}
 logout.addEventListener("click", salir)
+miPerfil.addEventListener("click", perfil)
